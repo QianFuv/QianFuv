@@ -254,36 +254,6 @@ def text_width(text: str, font_size: float) -> float:
     return sum(font_size if unicodedata.east_asian_width(char) in "WF" else font_size * 0.6 for char in text)
 
 
-def wrap_text(text: str, max_width: float, font_size: float, max_lines: int) -> list[str]:
-    """Wrap text to a pixel width, truncating with an ellipsis.
-
-    Args:
-        text: Text to wrap.
-        max_width: Maximum line width in pixels.
-        font_size: Font size in pixels.
-        max_lines: Maximum number of lines.
-
-    Returns:
-        Wrapped lines.
-    """
-    lines: list[str] = []
-    current = ""
-    for token in re.findall(r"[A-Za-z0-9_\-./:+#&']+\s*|\s+|.", text):
-        if current and text_width(current + token, font_size) > max_width:
-            lines.append(current.rstrip())
-            current = token.lstrip()
-        else:
-            current += token
-    if current.strip():
-        lines.append(current.rstrip())
-    if len(lines) <= max_lines:
-        return lines
-    last = lines[max_lines - 1]
-    while last and text_width(last + "…", font_size) > max_width:
-        last = last[:-1]
-    return lines[: max_lines - 1] + [last.rstrip() + "…"]
-
-
 def relative_time(timestamp: str, now: dt.datetime) -> str:
     """Format a timestamp as a short relative age.
 
@@ -511,7 +481,7 @@ def render_repo_card(repository: dict, activity: list[int], commit_count: int, n
         SVG markup.
     """
     width, height = 420, 146
-    description = wrap_text(repository["description"] or "No description yet.", width - 40, 12, 2)
+    description = escape(repository["description"] or "No description yet.")
     language = repository["primaryLanguage"] or {"name": "Text", "color": theme["muted"]}
     peak = max(activity) or 1
     spark_right, spark_base = width - 20, 114
@@ -520,9 +490,6 @@ def render_repo_card(repository: dict, activity: list[int], commit_count: int, n
         f'y="{spark_base - max(2, 22 * count / peak):.1f}" width="6" height="{max(2, 22 * count / peak):.1f}" rx="1.5" '
         f'fill="{theme["green"]}" fill-opacity="{0.35 + 0.65 * count / peak:.2f}"/>'
         for index, count in enumerate(activity)
-    )
-    description_lines = "".join(
-        f'<text x="20" y="{64 + index * 18}" class="desc">{escape(text)}</text>' for index, text in enumerate(description)
     )
     meta_x = 20
     meta = [
@@ -536,7 +503,7 @@ def render_repo_card(repository: dict, activity: list[int], commit_count: int, n
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" font-family="{FONT}">
 <style>
 .name{{fill:{theme["accent"]};font-size:15px;font-weight:700}}
-.desc{{fill:{theme["text"]};font-size:12px}}
+.desc{{margin:0;color:{theme["text"]};font:12px/18px {FONT};overflow:hidden;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}}
 .meta{{fill:{theme["muted"]};font-size:12px}}
 .small{{fill:{theme["muted"]};font-size:10px}}
 .grow{{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .5s ease-out forwards}}
@@ -551,7 +518,7 @@ def render_repo_card(repository: dict, activity: list[int], commit_count: int, n
 <path transform="translate(20 21)" fill="{theme["muted"]}" d="{REPO_ICON}"/>
 <text x="44" y="34" class="name">{escape(repository["name"])}</text>
 <text x="{width - 20}" y="33" text-anchor="end" class="small">updated {relative_time(repository["pushedAt"], now)}</text>
-{description_lines}
+<foreignObject x="20" y="49" width="{width - 40}" height="36"><p xmlns="http://www.w3.org/1999/xhtml" class="desc">{description}</p></foreignObject>
 {"".join(meta)}
 <text x="{spark_right}" y="130" text-anchor="end" class="small">{commit_count} commit{"" if commit_count == 1 else "s"} · {ACTIVITY_WEEKS}w</text>
 {bars}
