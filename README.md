@@ -9,8 +9,8 @@
 
 <!-- PROJECTS:START -->
 <p align="center">
-<a href="https://github.com/QianFuv/Yousage"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-Yousage-dark.svg"><img alt="Yousage" src="assets/repo-Yousage-light.svg" width="49%"></picture></a>
 <a href="https://github.com/QianFuv/LitRadar"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-LitRadar-dark.svg"><img alt="LitRadar" src="assets/repo-LitRadar-light.svg" width="49%"></picture></a>
+<a href="https://github.com/QianFuv/Yousage"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-Yousage-dark.svg"><img alt="Yousage" src="assets/repo-Yousage-light.svg" width="49%"></picture></a>
 <a href="https://github.com/QianFuv/QianFuv.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-QianFuv.github.io-dark.svg"><img alt="QianFuv.github.io" src="assets/repo-QianFuv.github.io-light.svg" width="49%"></picture></a>
 <a href="https://github.com/QianFuv/Miracles-Journey"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-Miracles-Journey-dark.svg"><img alt="Miracles-Journey" src="assets/repo-Miracles-Journey-light.svg" width="49%"></picture></a>
 </p>
@@ -28,5 +28,5 @@
 </picture>
 
 <!-- UPDATED:START -->
-<p align="right"><sub>auto-updated 2026-10-20 19:45 UTC</sub></p>
+<p align="right"><sub>auto-updated 2026-10-21 19:47 UTC</sub></p>
 <!-- UPDATED:END -->
