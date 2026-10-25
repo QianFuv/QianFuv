@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="146" viewBox="0 0 420 146" font-family="'JetBrains Mono','Cascadia Code','SFMono-Regular',Consolas,Menlo,monospace">
+<style>
+.name{fill:#0969da;font-size:15px;font-weight:700}
+.desc{margin:0;color:#1f2328;font:12px/18px 'JetBrains Mono','Cascadia Code','SFMono-Regular',Consolas,Menlo,monospace;overflow:hidden;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.meta{fill:#656d76;font-size:12px}
+.small{fill:#656d76;font-size:10px}
+.grow{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .5s ease-out forwards}
+@keyframes grow{to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.grow{animation:none;transform:none}}
+</style>
+<defs><linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#0969da" stop-opacity="0"/><stop offset=".5" stop-color="#0969da"/><stop offset="1" stop-color="#8250df" stop-opacity="0"/>
+<animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0" dur="4s" repeatCount="indefinite"/></linearGradient>
+<clipPath id="card"><rect width="420" height="146" rx="10"/></clipPath></defs>
+<rect x="0.5" y="0.5" width="419" height="145" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<rect width="420" height="2" fill="url(#shine)" clip-path="url(#card)"/>
+<path transform="translate(20 21)" fill="#656d76" d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/>
+<text x="44" y="34" class="name">QoAuth</text>
+<text x="400" y="33" text-anchor="end" class="small">updated 7m ago</text>
+<foreignObject x="20" y="49" width="380" height="36"><p xmlns="http://www.w3.org/1999/xhtml" class="desc">Lightweight self-hosted identity service for a person or small team</p></foreignObject>
+<circle cx="25" cy="126" r="5" fill="#663399"/><text x="36" y="130" class="meta">CSS</text><text x="75.6" y="130" class="meta">★ 0</text><text x="115.19999999999999" y="130" class="meta">⑂ 0</text>
+<text x="400" y="130" text-anchor="end" class="small">65 commits · 12w</text>
+<rect class="grow" style="animation-delay:0.30s" x="295" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.35s" x="304" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.40s" x="313" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.45s" x="322" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.50s" x="331" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.55s" x="340" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.60s" x="349" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.65s" x="358" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.70s" x="367" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.75s" x="376" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.80s" x="385" y="112.0" width="6" height="2.0" rx="1.5" fill="#1a7f37" fill-opacity="0.35"/><rect class="grow" style="animation-delay:0.85s" x="394" y="92.0" width="6" height="22.0" rx="1.5" fill="#1a7f37" fill-opacity="1.00"/>
+</svg>
