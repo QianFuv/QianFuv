@@ -9,17 +9,17 @@
 
 <!-- PROJECTS:START -->
 <p align="center">
+<a href="https://github.com/QianFuv/Roomark"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-Roomark-dark.svg"><img alt="Roomark" src="assets/repo-Roomark-light.svg" width="49%"></picture></a>
 <a href="https://github.com/QianFuv/LitRadar"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-LitRadar-dark.svg"><img alt="LitRadar" src="assets/repo-LitRadar-light.svg" width="49%"></picture></a>
 <a href="https://github.com/QianFuv/Yousage"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-Yousage-dark.svg"><img alt="Yousage" src="assets/repo-Yousage-light.svg" width="49%"></picture></a>
 <a href="https://github.com/QianFuv/Exta"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-Exta-dark.svg"><img alt="Exta" src="assets/repo-Exta-light.svg" width="49%"></picture></a>
-<a href="https://github.com/QianFuv/QoAuth"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/repo-QoAuth-dark.svg"><img alt="QoAuth" src="assets/repo-QoAuth-light.svg" width="49%"></picture></a>
 </p>
 <!-- PROJECTS:END -->
 
 ### 🧰 Tech Stack
 
 <!-- TECH:START -->
-<p align="center"><img alt="Tech stack" src="https://skillicons.dev/icons?i=go,ts,css,js,html,java,py,powershell,bash,docker,git,githubactions&perline=12"></p>
+<p align="center"><img alt="Tech stack" src="https://skillicons.dev/icons?i=go,ts,css,js,java,html,py,powershell,bash,git,githubactions&perline=12"></p>
 <!-- TECH:END -->
 
 <picture>
@@ -28,5 +28,5 @@
 </picture>
 
 <!-- UPDATED:START -->
-<p align="right"><sub>auto-updated 2026-11-11 22:22 UTC</sub></p>
+<p align="right"><sub>auto-updated 2026-11-12 21:58 UTC</sub></p>
 <!-- UPDATED:END -->
